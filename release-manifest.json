@@ -7,7 +7,7 @@
   "source_license": "AGPL-3.0-only; see per-component exceptions",
   "files": {
     ".gitattributes": "ddf06847d34e2846446657e47d85d3aa6716544df261cc513e18266b446dc943",
-    ".github/workflows/ci.yml": "3a5bbf6ecb01dc9de9a836064c6ec1d347745dd250cb374b7b58350bd0a96d5d",
+    ".github/workflows/ci.yml": "62abb731a47c182f7723c1a4245361b7ae131a22e83564920c01a0ef140d3558",
     ".gitignore": "92f531875723106da55339d4e9ea81fd7ef9bb3a649816abd420de37b8079807",
     "AGENTS.md": "6d61090d00a04ee561c8798793abc6fc0adf50e730f8c09df90954a85f5b7749",
     "CONTRIBUTING.md": "eaaa3bf778db8768929fdceb7fdf5ce497ef1dd44958918f4b213ea7d65f6d0e",

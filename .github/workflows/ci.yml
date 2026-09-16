@@ -17,15 +17,18 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12.11'
+          python-version: '3.12.10'
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - name: Install locked dependencies
         run: |
           python -m pip install uv==0.8.22
-          uv pip sync --python python integrations/release-requirements.lock.txt
-          uv pip install --python python --no-deps --no-build-isolation .
+          uv python install 3.12.11
+          uv venv --python 3.12.11 .venv
+          uv pip sync --python .venv/Scripts/python.exe integrations/release-requirements.lock.txt
+          uv pip install --python .venv/Scripts/python.exe --no-deps --no-build-isolation .
+          "$pwd/.venv/Scripts" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
       - name: Python regression
         run: python -m pytest tests -q
       - name: JavaScript regression
