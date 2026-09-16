@@ -1,0 +1,8 @@
+[
+  {"query":"跨天换窗口", "expected_notes":["question-cross-task-continuity"]},
+  {"query":"完整保存公开原文", "expected_notes":["idea-full-public-archive"]},
+  {"query":"实验异常负结果", "expected_notes":["idea-experiment-divergence"]},
+  {"query":"支持与反对证据", "expected_notes":["idea-evidence-enrichment"]},
+  {"query":"多个问题之间的关联网络", "expected_notes":["idea-linked-candidates"]},
+  {"query":"对话提示词不想反复复制到记事本", "expected_notes":["question-research-memory","idea-full-public-archive"]}
+]

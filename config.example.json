@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "project_id": "synthetic-test-archive",
+  "project_name": "Synthetic test archive",
+  "enabled": true,
+  "default_workstream": "system-development",
+  "paths": {
+    "vault": "vault",
+    "data": "data",
+    "runs": "runs",
+    "runtime": "runtime",
+    "output": "output",
+    "integrations": "integrations"
+  },
+  "embedding": {
+    "provider": "fastembed",
+    "model": "jinaai/jina-embeddings-v2-base-zh",
+    "dimensions": 768
+  },
+  "capture": {
+    "max_batch_events": 80,
+    "max_batch_characters": 50000,
+    "require_session_binding": true
+  },
+  "resume_character_budget": 6500,
+  "resume_token_budget": 2000,
+  "retrieval": {
+    "min_similarity": 0.35
+  },
+  "workspaces": []
+}

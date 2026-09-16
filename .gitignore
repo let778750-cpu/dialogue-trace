@@ -1,0 +1,15 @@
+runtime/
+build/
+dist/
+data/
+vault/
+runs/
+output/
+config.json
+.codex/
+.env
+*.egg-info/
+__pycache__/
+.pytest_cache/
+.venv/
+*.zip

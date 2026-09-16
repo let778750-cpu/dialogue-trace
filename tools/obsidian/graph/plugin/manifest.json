@@ -1,0 +1,9 @@
+{
+  "id": "research-graph",
+  "name": "研究时间线与知识关系",
+  "version": "0.8.0",
+  "minAppVersion": "1.4.16",
+  "description": "按来源顺序阅读科研对话；公开过程可展开，知识关系按需查看。",
+  "author": "Research Memory project",
+  "isDesktopOnly": true
+}

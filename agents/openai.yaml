@@ -1,0 +1,6 @@
+interface:
+  display_name: "Research Memory 科研记忆"
+  short_description: "跨 Codex 任务续接研究问题，保留原话、关键结果与证据，可选 Obsidian 时间线"
+  default_prompt: "使用 $research-memory 恢复当前研究线，核对新进展、来源和下一步。"
+policy:
+  allow_implicit_invocation: true

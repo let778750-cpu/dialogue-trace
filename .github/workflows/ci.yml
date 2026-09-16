@@ -1,0 +1,38 @@
+name: Windows checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    env:
+      PYTHONUTF8: '1'
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install locked dependencies
+        run: |
+          python -m pip install uv==0.8.22
+          uv pip sync --python python integrations/release-requirements.lock.txt
+          uv pip install --python python --no-deps --no-build-isolation .
+      - name: Python regression
+        run: python -m pytest tests -q
+      - name: JavaScript regression
+        run: node --test (Get-ChildItem tools/obsidian/graph/*.test.cjs).FullName
+      - name: Release integrity and local documentation links
+        run: python scripts/check_release.py
+      - name: Build optional Obsidian component
+        run: python scripts/build_obsidian.py --output build/obsidian
+      - name: Synthetic case
+        run: python scripts/showcase.py --root "${{ runner.temp }}/research-memory-example" --with-obsidian

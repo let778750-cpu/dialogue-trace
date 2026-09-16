@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "research-memory"
+version = "0.8.0a1"
+license = "AGPL-3.0-only"
+description = "Local research event capture, provenance and continuity for Codex and Obsidian"
+requires-python = ">=3.12"
+dependencies = ["PyYAML>=6.0", "psutil>=6.0"]
+
+[project.scripts]
+research-memory = "research_memory.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
