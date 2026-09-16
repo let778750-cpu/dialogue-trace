@@ -1,10 +1,10 @@
 ---
-name: research-memory
+name: dialogue-trace
 description: Record and resume research questions, evidence and experiments across Codex tasks in explicitly registered local workspaces. Use when continuing a research line, organizing research discussions, locating a result or recovering the next research step. Unrelated tasks and unregistered workspaces are outside capture scope.
 license: AGPL-3.0
 ---
 
-# Research Memory
+# dialogue-trace
 
 Keep research questions, public source messages and evidence traceable across tasks. Use the current model for interpretation; do not start a background model. Windows and Codex are the supported first release. Obsidian is optional. Raw archival uses deterministic scripts, never another model. Read [capture and typed inspection](references/capture-and-trajectory.md) when explaining coverage, cost or event details.
 

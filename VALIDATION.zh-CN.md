@@ -1,8 +1,10 @@
-# 0.8.0-preview.2 验证报告
+# 0.8.0-preview.3 验证报告
 
 [English](VALIDATION.md) · [中文主页](README.zh-CN.md)
 
 验证日期：**2026-09-17（Asia/Shanghai）**。本版是可安装预览版。工程检查和有限范围的实际 Obsidian 操作已通过；真实宿主采集覆盖、完整界面矩阵和人的研究使用效果分别验收。
+
+命名更新：preview.3 将项目、Skill 元数据、安装目录和下载包统一为 `dialogue-trace`。运行时代码与 preview.2 相同；下列实测成绩沿用其验收证据。
 
 ## 已验证
 

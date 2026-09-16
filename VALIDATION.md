@@ -1,8 +1,10 @@
-# Validation: 0.8.0-preview.2
+# Validation: 0.8.0-preview.3
 
 [简体中文](VALIDATION.zh-CN.md) · [Home](README.md)
 
 Test date: **2026-09-17 (Asia/Shanghai)**. This is an installable preview. Engineering checks and a bounded real Obsidian walkthrough passed; live host capture coverage and human research outcomes remain separate acceptance gates.
+
+Naming update: preview.3 uses `dialogue-trace` consistently for the project, skill metadata, installation folder and download. Runtime code is unchanged from preview.2; its measured results below remain historical evidence.
 
 ## Verified
 

@@ -1,6 +1,6 @@
 # Windows installation and recovery
 
-Keep the downloaded skill directory outside its private data directory. The complete repository root is the skill folder; do not copy only SKILL.md. Python 3.12+ is required. A bootstrap Python creates the downloader; initialization downloads managed CPython 3.12.11 into the private runtime and installs locked dependencies. Download failures preserve the instance and can be retried; embeddings are downloaded only when requested by semantic indexing.
+Keep the downloaded skill directory outside its private data directory. The complete repository root is the `dialogue-trace` skill folder; do not copy only SKILL.md. Python 3.12+ is required. A bootstrap Python creates the downloader; initialization downloads managed CPython 3.12.11 into the private runtime and installs locked dependencies. Download failures preserve the instance and can be retried; embeddings are downloaded only when requested by semantic indexing.
 
 From the skill directory:
 
@@ -13,7 +13,7 @@ From the skill directory:
 
 Paths above are examples, not directories to scan. Initialization configures only the supplied workspace. New instances require the skill to explicitly enter a research session with `bind` before hooks archive that task; reconcile its first prompt from the selected transcript. Legacy instances keep their previously enabled capture policy until deliberately changed. Existing settings are preserved; a conflicting integration produces a specific error. The host may require reopening the task to load newly configured tools. Verify observed hooks and transcript reconciliation independently.
 
-Open the reported vault in Obsidian and enable its installed Research Memory plugin. The timeline works without Juggl. To use the optional local graph, install and enable Juggl **1.5.0**. Obsidian itself is obtained separately. Existing user plugin settings and reading positions are retained on managed updates.
+Open the reported vault in Obsidian and enable its installed research timeline plugin. The timeline works without Juggl. To use the optional local graph, install and enable Juggl **1.5.0**. Obsidian itself is obtained separately. Existing user plugin settings and reading positions are retained on managed updates.
 
 ## Upgrade
 

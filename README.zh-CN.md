@@ -1,6 +1,6 @@
 <div align="center">
 
-# Research Memory · 科研记忆
+# dialogue-trace · 科研记忆
 
 **把问题留下，把下一步为何这样走找回来。**
 
@@ -9,14 +9,14 @@
 **简体中文** · [English](README.md) · [开始使用](#开始使用) · [案例](#一个问题跨两个任务) · [验证状态](VALIDATION.zh-CN.md)
 
 ![Windows](https://img.shields.io/badge/platform-Windows-0078D4)
-![Preview](https://img.shields.io/badge/release-0.8.0--preview.2-7C5CBB)
+![Preview](https://img.shields.io/badge/release-0.8.0--preview.3-7C5CBB)
 ![License](https://img.shields.io/badge/license-AGPL--3.0-blue)
 
 </div>
 
 科研讨论往往跨越多个窗口：一个任务补充了条件，另一个任务推翻了原来的解释，隔天回来又需要找出**改了什么、为什么改、依据在哪里**。
 
-Research Memory 保留公开原话，以研究问题组织不同任务中的讨论。默认按顺序阅读，重要进展单独定位，命令输出与来源详情按需展开。
+dialogue-trace 保留公开原话，以研究问题组织不同任务中的讨论。默认按顺序阅读，重要进展单独定位，命令输出与来源详情按需展开。
 
 ![合成温漂研究案例的实际时间线](assets/screenshots/timeline-light.jpg)
 
@@ -67,11 +67,11 @@ Research Memory 保留公开原话，以研究问题组织不同任务中的讨�
 **1. 安装整个 Skill。** 在 Codex 中输入：
 
 ```text
-使用 skill-installer，从 https://github.com/let778750-cpu/money-king
-的仓库根目录安装 skill，安装名为 research-memory。
+使用 skill-installer，从 https://github.com/let778750-cpu/dialogue-trace
+的仓库根目录安装 skill，安装名为 dialogue-trace。
 ```
 
-也可从 [Releases](https://github.com/let778750-cpu/money-king/releases) 下载 ZIP，将完整的 `research-memory` 文件夹放入 Codex 的 skill 目录，不能只复制 `SKILL.md`。安装后新开任务，以便宿主加载。
+也可从 [dialogue-trace-0.8.0-preview.3.zip](https://github.com/let778750-cpu/dialogue-trace/releases/download/v0.8.0-preview.3/dialogue-trace-0.8.0-preview.3.zip) 下载 ZIP，将完整的 `dialogue-trace` 文件夹放入 Codex 的 skill 目录，不能只复制 `SKILL.md`。安装后新开任务，以便宿主加载。
 
 **2. 初始化私有数据。** 在 skill 文件夹内运行；替换示例路径：
 
@@ -86,7 +86,7 @@ Research Memory 保留公开原话，以研究问题组织不同任务中的讨�
 **3. 开始研究。**
 
 ```text
-使用 $research-memory 继续研究温升与传感器漂移的关系。
+使用 $dialogue-trace 继续研究温升与传感器漂移的关系。
 先读取另一任务的相关进展，再提出下一步实验。
 ```
 
@@ -114,6 +114,6 @@ Skill 会显式进入研究任务、核对可访问转录并恢复研究线。�
 
 ## 开发与许可证
 
-Python 源码在 `src`，Obsidian 组件源码在 `tools/obsidian/graph/plugin`。仓库提供 Windows CI、合成示例、固定依赖和文件校验清单。命令见 [English README](README.md#development)，参与说明见 [CONTRIBUTING.md](CONTRIBUTING.md)，问题可提交至 [Issues](https://github.com/let778750-cpu/money-king/issues)。
+Python 源码在 `src`，Obsidian 组件源码在 `tools/obsidian/graph/plugin`。仓库提供 Windows CI、合成示例、固定依赖和文件校验清单。命令见 [English README](README.md#development)，参与说明见 [CONTRIBUTING.md](CONTRIBUTING.md)，问题可提交至 [Issues](https://github.com/let778750-cpu/dialogue-trace/issues)。
 
 自有代码采用 [AGPL-3.0](LICENSE)；既有 Obsidian 适配器保留 GPL-3.0，第三方组件保留原声明，见 [THIRD_PARTY.md](THIRD_PARTY.md)。不打包 Obsidian 应用。感谢 Python、Basic Memory、FastMCP、Obsidian 生态及 Harness 的公开设计资料；未复制 Harness 实现源码。

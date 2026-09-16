@@ -54,7 +54,7 @@ def main():
     if issues:
         raise SystemExit('\n'.join(issues))
     if args.write:
-        manifest = dict(release='0.8.0-preview.2', skill='research-memory', python='0.8.0a1',
+        manifest = dict(release='0.8.0-preview.3', skill='dialogue-trace', python='0.8.0a1',
                         obsidian='0.8.0', private_data_included=False,
                         source_license='AGPL-3.0-only; see per-component exceptions', files=current)
         path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2)+'\n', encoding='utf-8', newline='\n')

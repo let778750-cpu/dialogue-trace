@@ -1,6 +1,6 @@
 <div align="center">
 
-# Research Memory
+# dialogue-trace
 
 **Keep the question. Recover why the next step changed.**
 
@@ -9,14 +9,14 @@ A local research memory skill for Codex, with an optional Obsidian timeline.
 [简体中文](README.zh-CN.md) · **English** · [Install](#quick-start) · [Examples](#one-question-two-tasks) · [Validation](VALIDATION.md)
 
 ![Windows](https://img.shields.io/badge/platform-Windows-0078D4)
-![Preview](https://img.shields.io/badge/release-0.8.0--preview.2-7C5CBB)
+![Preview](https://img.shields.io/badge/release-0.8.0--preview.3-7C5CBB)
 ![License](https://img.shields.io/badge/license-AGPL--3.0-blue)
 
 </div>
 
 Research rarely fits into one chat. A condition changes in another task; an experiment weakens an explanation; the next day, you need to recover **what changed, why, and where the evidence came from**.
 
-Research Memory preserves public source messages and organizes them around research questions. Read the discussion in order, inspect important results, and open technical details when needed.
+dialogue-trace preserves public source messages and organizes them around research questions. Read the discussion in order, inspect important results, and open technical details when needed.
 
 ![Research timeline with a synthetic thermal-drift example](assets/screenshots/timeline-light.jpg)
 
@@ -24,7 +24,7 @@ Research Memory preserves public source messages and organizes them around resea
 
 ## What you can do
 
-| Need | Research Memory |
+| Need | dialogue-trace |
 |---|---|
 | Continue one question across tasks | Bind source tasks to a stable research workstream and read a bounded update brief. |
 | Discuss several questions in one task | Assign continuous, complete message ranges; reference another line without duplicating the original. |
@@ -68,11 +68,11 @@ A maintainer-recorded walkthrough will be added here. The [recording guide](docs
 
 ```text
 Use skill-installer to install the repository root from
-https://github.com/let778750-cpu/money-king
-as a skill named research-memory.
+https://github.com/let778750-cpu/dialogue-trace
+as a skill named dialogue-trace.
 ```
 
-Alternatively, download the [release ZIP](https://github.com/let778750-cpu/money-king/releases) into your Codex skill directory. Keep the complete `research-memory` folder; do not copy only `SKILL.md`. Open a new task afterward.
+Alternatively, download the [dialogue-trace-0.8.0-preview.3.zip](https://github.com/let778750-cpu/dialogue-trace/releases/download/v0.8.0-preview.3/dialogue-trace-0.8.0-preview.3.zip) into your Codex skill directory. Keep the complete `dialogue-trace` folder; do not copy only `SKILL.md`. Open a new task afterward.
 
 **2. Initialize private storage.** Run from the skill folder; replace these example paths:
 
@@ -87,7 +87,7 @@ Initialization downloads pinned CPython 3.12.11 and locked dependencies into the
 **3. Start a research task.**
 
 ```text
-Use $research-memory to continue the temperature-and-drift question.
+Use $dialogue-trace to continue the temperature-and-drift question.
 Read relevant changes from the other task before proposing the next experiment.
 ```
 
@@ -105,7 +105,7 @@ The skill enters the research task, checks accessible transcripts and resumes it
 
 There is no background “cheap model recorder.” A skill is a workflow, not a resident watcher. Public explanations are preserved; hidden reasoning is not collected. Compaction records mark boundaries without copying private internal summaries.
 
-The inspector borrows design principles from [DeepSeek Harness Trajectory](https://github.com/deepseek-ai/deepseek-harness/tree/master/packages/client/ui-trajectory). Research Memory adds persistent workstreams, evidence links and reversible organization across tasks. It does not claim Harness host support or invent request fields that Codex does not expose.
+The inspector borrows design principles from [DeepSeek Harness Trajectory](https://github.com/deepseek-ai/deepseek-harness/tree/master/packages/client/ui-trajectory). dialogue-trace adds persistent workstreams, evidence links and reversible organization across tasks. It does not claim Harness host support or invent request fields that Codex does not expose.
 
 ## Validation and limits
 
@@ -127,7 +127,7 @@ python scripts/check_release.py
 python scripts/build_obsidian.py --output build/obsidian
 ```
 
-Windows CI, synthetic examples, component source code and per-file checksums are included. [Contributing](CONTRIBUTING.md) · [Issues](https://github.com/let778750-cpu/money-king/issues)
+Windows CI, synthetic examples, component source code and per-file checksums are included. [Contributing](CONTRIBUTING.md) · [Issues](https://github.com/let778750-cpu/dialogue-trace/issues)
 
 ## License and acknowledgments
 

@@ -2,7 +2,7 @@
 
 [English](installation.md) · [返回主页](../README.zh-CN.md)
 
-完整仓库根目录就是 `research-memory` skill。程序目录与私有数据目录必须分开；不能只复制 `SKILL.md`。需有 Python 3.12+ 用于下载工具；初始化会将固定 CPython 3.12.11、锁定依赖及缓存放入私有实例。
+完整仓库根目录就是 `dialogue-trace` skill。程序目录与私有数据目录必须分开；不能只复制 `SKILL.md`。需有 Python 3.12+ 用于下载工具；初始化会将固定 CPython 3.12.11、锁定依赖及缓存放入私有实例。
 
 ```powershell
 ./scripts/install.ps1 -Workspace 'C:/Research/MyProject' -DataDir 'C:/ResearchMemory/MyArchive'
