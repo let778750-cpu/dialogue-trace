@@ -1,5 +1,6 @@
 """Create a clearly synthetic, independent research example."""
 import argparse
+import os
 from pathlib import Path
 from research_memory.installation import setup
 from research_memory.storage import Config,Store
@@ -12,6 +13,7 @@ p=argparse.ArgumentParser();p.add_argument('--root',required=True);a=p.parse_arg
 root=Path(a.root).resolve()
 if (root/'config.json').exists():raise SystemExit('Use a new directory; existing research instances are never reset')
 workspace=root/'demo-workspace';workspace.mkdir(parents=True,exist_ok=True)
+os.environ['RESEARCH_MEMORY_PACKAGE_ROOT']=str(Path(__file__).resolve().parents[1])
 setup(root,workspace,'合成温漂研究演示')
 s=Store(Config(root));c=Continuity(s)
 c.bind(workspace,'demo-a','main');c.bind(workspace,'demo-b','main')

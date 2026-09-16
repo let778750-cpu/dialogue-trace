@@ -4,6 +4,7 @@ No private transcript is read. Tool outputs below are labeled illustrative data,
 not measurements. Use a new instance directory; existing instances are preserved.
 """
 import argparse
+import os
 from pathlib import Path
 from research_memory.installation import setup, attach_obsidian
 from research_memory.storage import Config, Store
@@ -14,6 +15,19 @@ from research_memory.timeline import publish_projection
 
 
 def create(root, with_obsidian=False):
+    # Resources belong to this skill, even if Python imports an installed wheel.
+    previous_package = os.environ.get('RESEARCH_MEMORY_PACKAGE_ROOT')
+    os.environ['RESEARCH_MEMORY_PACKAGE_ROOT'] = str(Path(__file__).resolve().parents[1])
+    try:
+        return _create(root, with_obsidian)
+    finally:
+        if previous_package is None:
+            os.environ.pop('RESEARCH_MEMORY_PACKAGE_ROOT', None)
+        else:
+            os.environ['RESEARCH_MEMORY_PACKAGE_ROOT'] = previous_package
+
+
+def _create(root, with_obsidian=False):
     root = Path(root).resolve()
     if (root/'config.json').exists():
         raise ValueError('Choose a new directory; existing research data is preserved.')
